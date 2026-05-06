@@ -165,3 +165,112 @@ Se logró configurar exitosamente el entorno de desarrollo con Astro, establecie
 
 El proyecto inicial permite comprender la estructura del framework y garantiza un punto de partida estable para los siguientes módulos del curso.
 
+---
+
+# Práctica 02: Fundamentos de Astro
+
+## Descripción
+
+En esta práctica se amplió el proyecto mediante la creación de componentes reutilizables y nuevas páginas, aplicando conceptos fundamentales de Astro como **props, frontmatter y renderizado dinámico**.
+
+---
+
+## Objetivos
+
+- Crear componentes reutilizables
+- Utilizar props tipados
+- Implementar múltiples páginas
+- Aplicar renderizado dinámico y condicional
+
+---
+
+## Archivos añadidos
+
+```bash
+src/
+ ├── components/
+ │   └── RecursoCard.astro
+ └── pages/
+     ├── index.astro
+     └── about.astro
+```
+
+---
+
+## Funcionalidades Implementadas
+
+### Componente RecursoCard
+
+- Recibe props: `titulo`, `url`, `descripcion`
+- Encapsula estilos propios
+
+---
+
+### Página principal (index)
+
+- Lista de recursos renderizada dinámicamente
+- Uso de `.map()`
+- Integración de componente reutilizable
+
+---
+
+### Página About
+
+- Nueva ruta `/about`
+- Información del proyecto
+- Lista del equipo
+- Navegación entre páginas
+
+---
+
+### Renderizado condicional
+
+- Uso de `&&` para mostrar contenido
+- Detección de entorno (desarrollo / producción)
+
+---
+
+## Resultado Esperado
+
+### `/`
+
+- Lista de recursos en formato cards
+- Navegación a `/about`
+
+### `/about`
+
+- Información del proyecto
+- Lista del equipo
+- Mensaje dinámico según entorno
+
+---
+
+## Evidencias
+
+### Página principal con cards
+
+<p align="center">
+  <img src="src/assets/02-home.png" width="700">
+</p>
+
+### Página About
+
+<p align="center">
+  <img src="src/assets/02-about.png" width="700">
+</p>
+
+---
+
+## Validaciones
+
+- Componente reutilizable funcionando
+- Props tipados correctamente
+- Página `/about` accesible
+- Renderizado dinámico correcto
+- `pnpm astro check` sin errores
+
+---
+
+## Conclusión
+
+Se logró implementar correctamente los fundamentos de Astro, destacando la creación de componentes reutilizables y el uso de renderizado dinámico. El proyecto continúa evolucionando de forma estructurada, manteniendo una base sólida para futuras prácticas.
