@@ -60,3 +60,40 @@ const recursos = [
   h1 { color: #FF5D01; }
   a { color: #FF5D01; }
 </style>
+
+
+---
+const herramientas = [
+  {
+    titulo: "VS Code",
+    url: "https://code.visualstudio.com/",
+    descripcion: "Editor de código",
+  },
+  {
+    titulo: "GitHub",
+    url: "https://github.com/",
+    descripcion: "Control de versiones",
+  },
+  {
+    titulo: "Figma",
+    url: "https://figma.com/",
+    descripcion: "Diseño UI",
+  },
+];
+
+const mostrarHerramientas = herramientas.length > 0;
+---
+
+<section>
+  <h2>Herramientas</h2>
+
+  {mostrarHerramientas && (
+    <div>
+      {herramientas.map(h => (
+        <RecursoCard titulo={h.titulo} url={h.url} descripcion={h.descripcion} />
+      ))}
+    </div>
+  )}
+
+  {!mostrarHerramientas && <p>No hay herramientas disponibles.</p>}
+</section>
